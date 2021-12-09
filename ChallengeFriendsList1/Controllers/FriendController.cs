@@ -21,6 +21,16 @@ namespace ChallengeFriendsList1.Controllers
 
             return View(ActualList);
         }
+        [HttpGet]
+        public IActionResult InsertNewFriend()
+        {
+            return View();
+        }
+        [HttpPost]
+        public IActionResult InsertNewFriend(Friend friend)
+        {
+            return View();
+        }
 
     }
 }
