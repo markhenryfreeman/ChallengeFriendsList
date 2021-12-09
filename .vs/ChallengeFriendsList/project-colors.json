@@ -1,0 +1,16 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "b4dbdd2d-0e5b-4592-b902-93de9913ae24": {
+      "ProjectGuid": "b4dbdd2d-0e5b-4592-b902-93de9913ae24",
+      "DisplayName": "ChallengeFriendsList",
+      "ColorIndex": 0
+    },
+    "aa1c6030-ede2-403c-814d-cfda338f20e9": {
+      "ProjectGuid": "aa1c6030-ede2-403c-814d-cfda338f20e9",
+      "DisplayName": "ChallengeFriendsList1",
+      "ColorIndex": 1
+    }
+  },
+  "NextColorIndex": 2
+}

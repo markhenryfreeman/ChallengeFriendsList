@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "N7ZZiSxMhzez2BmfHL8BcQ+hG1zeawnkTE4UgrWS2uGy0tRINNQqZgrRL90tq87nuwH47u6glgwt910i8YEH2A==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\markh\\source\\repos\\MVC Challenges\\ChallengeFriendsList\\ChallengeFriendsList1\\ChallengeFriendsList1.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\markh\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\5.0.12\\microsoft.netcore.app.host.win-x64.5.0.12.nupkg.sha512"
+  ],
+  "logs": []
+}

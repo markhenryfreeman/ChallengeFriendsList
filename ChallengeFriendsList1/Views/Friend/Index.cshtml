@@ -1,0 +1,16 @@
+﻿@model ListOfFriends
+
+<ul class="friendslist">
+    @foreach (var item in Model.listOfFriends)
+    {
+        <li class="friend">
+            <div class="friend-id">
+                <p>@item.FriendID</p>
+            </div>
+            <div class="friend-info">
+                <p>@item.FriendName</p>
+                <p>@item.Place</p>
+            </div>
+        </li>
+    }
+</ul>
