@@ -1,0 +1,25 @@
+﻿@model Friend
+
+
+    <form method="post" asp-action="EditFriend">
+        <input type ="hidden" asp-for="FriendID"/>
+
+        <div class="form-field">
+            <label asp-for="FriendID"></label>
+            <input asp-for="FriendID" />
+            <span asp-validation-for="FriendID"></span>
+        </div>
+        <div class="form-field">
+            <label asp-for="FriendName"></label>
+            <input asp-for="FriendName" />
+            <span asp-validation-for="FriendName"></span>
+        </div>
+        <div class="form-field">
+            <label asp-for="Place"></label>
+            <input asp-for="Place" />
+            <span asp-validation-for="Place"></span>
+        </div>
+        <div>
+            <input type="submit" value="Submit" />
+        </div>
+    </form>
