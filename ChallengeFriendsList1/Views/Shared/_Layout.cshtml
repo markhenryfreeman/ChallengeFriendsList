@@ -31,14 +31,25 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Friend" asp-action="InsertNewFriend">Add a Friend</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Friend" asp-action="editFriend">Update Friend</a>
+                        </li>
                     </ul>
+                    <p class="justify-justify-content-end">@ViewData["Desc"] &nbsp;</p>
+                    @*<p class="justify-content-between">@ViewBag.FriendName</p> *Place in Section*@
+
                 </div>
             </div>
         </nav>
     </header>
     <div class="container">
         <main role="main" class="pb-3">
-            @RenderBody()
+            <div class="RenderBody">
+                @RenderBody()
+                <div class="RenderSection">
+                    @RenderSection("section1", false)
+                </div>
+            </div>
         </main>
     </div>
 
@@ -46,6 +57,7 @@
         <div class="container">
             &copy; 2021 - ChallengeFriendsList1 - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
         </div>
+
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>

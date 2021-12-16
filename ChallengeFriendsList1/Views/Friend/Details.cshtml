@@ -1,0 +1,30 @@
+﻿@model Friend
+@{
+    ViewData["Desc"] = "All the good stuff about:"  + @Model.friendName;
+}
+
+    <h1>Friend Details</h1>
+
+    <a asp-action="Index">Go Back</a>
+
+    <table>
+        <thead>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Place</th>
+        <th>Age</th>
+        <th>Occupation</th>
+        <th>Favorite Sport</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td>@Model.id</td>
+                <td>@Model.friendName</td>
+                <td>@Model.place</td>
+                <td>@Model.age</td>
+                <td>@Model.occupation</td>
+                <td>@Model.sport</td>
+            </tr>
+
+        </tbody>
+    </table>

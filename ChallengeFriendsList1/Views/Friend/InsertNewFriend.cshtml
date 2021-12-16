@@ -1,5 +1,7 @@
 ﻿@model Friend
 
+@{ ViewData["Desc"] = "Insert a Friend"; }
+
 <html>
 <head>
 
@@ -10,25 +12,39 @@
     <form method="post" enctype="multipart/form-data" asp-action="InsertNewFriend">
         <div asp-validation-summary="All"></div>
         <div class="form-field">
-            <label asp-for="FriendID"></label>
-            <input asp-for="FriendID" />
-            <span asp-validation-for="FriendID"></span>
+            <label asp-for="id"></label>
+            <input asp-for="id" />
+            <span asp-validation-for="id"></span>
         </div>
         <div class="form-field">
-            <label asp-for="FriendName"></label>
-            <input asp-for="FriendName" />
-            <span asp-validation-for="FriendName"></span>
+            <label asp-for="friendName"></label>
+            <input asp-for="friendName" />
+            <span asp-validation-for="friendName"></span>
         </div>
         <div class="form-field">
-            <label asp-for="Place"></label>
-            <input asp-for="Place" />
-            <span asp-validation-for="Place"></span>
+            <label asp-for="place"></label>
+            <input asp-for="place" />
+            <span asp-validation-for="place"></span>
         </div>
-        <div>
-            <input type="submit" value="Submit"/>
+        <div class="form-field">
+            <label asp-for="age"></label>
+            <input asp-for="age" />
+            <span asp-validation-for="age"></span>
+        </div>
+        <div class="form-field">
+            <label asp-for="occupation"></label>
+            <input asp-for="occupation" />
+            <span asp-validation-for="occupation"></span>
+        </div>
+        <div class="form-field">
+            <label asp-for="sport"></label>
+            <input asp-for="sport" />
+            <span asp-validation-for="sport"></span>
+        </div>
+        <div class="form-field">
+            <input type="submit" value="Submit" />
         </div>
     </form>
-
 
 </body>
 

@@ -4,20 +4,27 @@ namespace ChallengeFriendsList1.Models
 {
     public class Friend
     {
-        [Display(Name = "Type Id: ")]
+        [Display(Name = "ID: ")]
         [Required(ErrorMessage = "You must enter an ID.")]
-        public int FriendID { get; set; }
+        public int id { get; set; }
 
-        [Display(Name = "Type Name: ")]
+        [Display(Name = "Name: ")]
         [Required(ErrorMessage = "You must enter a name.")]
-        public string FriendName { get; set; }
+        public string friendName { get; set; }
 
-        [Display(Name = "Type Location of friend: ")]
+        [Display(Name = "Place: ")]
         [StringLength(25)]
-        public string Place { get; set; }
+        public string place { get; set; }
 
+        [Display(Name = "Age: ")]
         public int age { get; set; }
+
+        [Display(Name = "Occupation: ")]
+        [Required(ErrorMessage = "You must enter an ID.")]
         public string occupation { get; set; }
-        public string favoriteSport { get; set; }
+
+        [Display(Name = "Favorite Sport: ")]
+        [Required(ErrorMessage = "You must enter an ID.")]
+        public string sport { get; set; }
     }
 }

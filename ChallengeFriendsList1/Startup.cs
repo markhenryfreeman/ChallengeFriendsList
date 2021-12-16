@@ -9,6 +9,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using ChallengeFriendsList1.Models;
+using ChallengeFriendsList1.Services;
 
 namespace ChallengeFriendsList1
 {
@@ -25,6 +26,7 @@ namespace ChallengeFriendsList1
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+            services.AddSingleton<IListOfFriends, ListOfFriends>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

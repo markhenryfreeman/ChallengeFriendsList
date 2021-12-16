@@ -9,25 +9,17 @@ namespace ChallengeFriendsList1.Controllers
         {    
             IListOfFriends _listOfFriends;
 
-        public FriendController(IListOfFriends myListService)
+        //Inject service into controller
+        public FriendController(IListOfFriends listOfFriends) //catches the service arguments
         {
-            _listOfFriends = myListService;
+            //Dependency Injection
+            _listOfFriends = listOfFriends;
         }
 
+        //Read Friend
           public IActionResult Index()
         {
-
-            List<Friend> friendsList = new List<Friend>()
-            {
-                new Friend() {FriendID = 1, FriendName = "John", Place = "Boston"},
-                new Friend() {FriendID = 2, FriendName = "Mike", Place = "Austin"},
-                new Friend() {FriendID = 3, FriendName = "Steve", Place = "Houston"}
-            };   
-
-            ListOfFriends ActualList = new ListOfFriends();
-            ActualList.listOfFriends = friendsList;
-
-            return View(ActualList);
+            return View(_listOfFriends);
         }
         [HttpGet]
         public IActionResult InsertNewFriend()
@@ -47,31 +39,41 @@ namespace ChallengeFriendsList1.Controllers
             return View();
         }
 
+        //Update Friend
         public IActionResult FriendsDetail (int id)
         {
             Friend friend = _listOfFriends.getFriendById(id);
             return View(friend);
         }
 
-        public IActionResult DeleteFriend(int id)
+        [HttpPost]
+        public IActionResult Edit(Friend model)
+        {
+            if (ModelState.IsValid)
+            {
+                Friend friend = _listOfFriends.getFriendById(model.id);
+                friend.id = model.id;
+                friend.friendName = model.friendName;
+                friend.age = model.age;
+                friend.occupation = model.occupation;
+                friend.place = model.place;
+                friend.sport = model.sport;
+            }
+
+            return View();
+        }
+
+        public IActionResult Details(int id)
         {
             Friend friend = _listOfFriends.getFriendById(id);
-            _listOfFriends.listOfFriends.Remove(friend);
+            return View(friend);
+        }
+
+        //Delete Friend
+        public IActionResult DeleteFriend(int id)
+        {
+            _listOfFriends.getFriendById(id);
             return RedirectToAction("Index");
-        }
-
-        public IActionResult EditFriend(int id)
-        {
-            Friend friend = _listOfFriends.getFriendsById(id);
-            return View(friend);
-        }
-
-        [HttpPost]
-        public IActionResult EditFriend(Friend friend)
-        {
-            Friend backupOffriend = _listOfFriends.getFriendById(friend.FriendID);
-            _listOfFriends
-            return View(friend);
         }
     }
 }

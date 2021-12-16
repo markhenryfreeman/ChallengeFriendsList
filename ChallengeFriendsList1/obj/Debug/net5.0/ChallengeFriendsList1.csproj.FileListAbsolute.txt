@@ -39,3 +39,5 @@ C:\Users\markh\source\repos\MVC Challenges\ChallengeFriendsList\ChallengeFriends
 C:\Users\markh\source\repos\MVC Challenges\ChallengeFriendsList\ChallengeFriendsList1\obj\Debug\net5.0\ChallengeFriendsList1.genruntimeconfig.cache
 C:\Users\markh\source\repos\MVC Challenges\ChallengeFriendsList\ChallengeFriendsList1\obj\Debug\net5.0\ChallengeFriendsList1.csproj.CopyComplete
 C:\Users\markh\source\repos\MVC Challenges\ChallengeFriendsList\ChallengeFriendsList1\obj\Debug\net5.0\Razor\Views\Friend\InsertNewFriend.cshtml.g.cs
+C:\Users\markh\source\repos\MVC Challenges\ChallengeFriendsList\ChallengeFriendsList1\obj\Debug\net5.0\Razor\Views\Friend\EditFriend.cshtml.g.cs
+C:\Users\markh\source\repos\MVC Challenges\ChallengeFriendsList\ChallengeFriendsList1\obj\Debug\net5.0\Razor\Views\Friend\Details.cshtml.g.cs

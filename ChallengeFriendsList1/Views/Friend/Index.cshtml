@@ -1,16 +1,37 @@
-﻿@model ListOfFriends
+﻿@using ChallengeFriendsList1.Services;
+
+@model ListOfFriends
+@{ 
+    ViewData["Title"] = "Index";
+    ViewData["Desc"] = "A list of all your friends";
+}
+
+@section section1
+{
+    <div class="instruction">
+        <div class="header"><h1>Welcome to the List of Friends!</h1></div>
+        <div class="body">
+            <p>1</p>
+            <p>2</p>
+            <p>3</p>
+            <p>4</p>
+        </div>
+    </div>
+}
+
+<a asp-action="InsertNewFriend">Add a new friend</a>
 
 <ul class="friendslist">
     @foreach (var item in Model.listOfFriends)
     {
-        <li class="friend">
-            <div class="friend-id">
-                <p>@item.FriendID</p>
-            </div>
-            <div class="friend-info">
-                <p>@item.FriendName</p>
-                <p>@item.Place</p>
-            </div>
-        </li>
-    }
+<li class="friend">
+    <div class="friend-info">
+        <p class="friends-name">@item.friendName</p>
+    </div>
+    <div class="friend-actions">
+        <a asp-action="Details" asp-route-id="@item.id">View Friend's Details</a>
+        <a asp-action="Delete" asp-route-id="@item.id">Delete Friend</a>
+        <a asp-action="editFriend" asp-route-id="@item.id">Update Friend</a>
+    </div>
+</li>}
 </ul>

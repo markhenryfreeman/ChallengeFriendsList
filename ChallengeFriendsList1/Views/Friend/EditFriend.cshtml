@@ -1,25 +1,52 @@
-﻿@model Friend
+﻿@model ChallengeFriendsList1.Models.Friend
 
+@{ ViewData["Title"] = "Update Friend Details"; }
 
-    <form method="post" asp-action="EditFriend">
-        <input type ="hidden" asp-for="FriendID"/>
+<h1>Update Friend Details</h1>
 
-        <div class="form-field">
-            <label asp-for="FriendID"></label>
-            <input asp-for="FriendID" />
-            <span asp-validation-for="FriendID"></span>
-        </div>
-        <div class="form-field">
-            <label asp-for="FriendName"></label>
-            <input asp-for="FriendName" />
-            <span asp-validation-for="FriendName"></span>
-        </div>
-        <div class="form-field">
-            <label asp-for="Place"></label>
-            <input asp-for="Place" />
-            <span asp-validation-for="Place"></span>
-        </div>
-        <div>
-            <input type="submit" value="Submit" />
-        </div>
-    </form>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="editFriend">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="id" class="control-label"></label>
+                <input asp-for="id" class="form-control" />
+                <span asp-validation-for="id" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="friendName" class="control-label"></label>
+                <input asp-for="friendName" class="form-control" />
+                <span asp-validation-for="friendName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="place" class="control-label"></label>
+                <input asp-for="place" class="form-control" />
+                <span asp-validation-for="place" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="age" class="control-label"></label>
+                <input asp-for="age" class="form-control" />
+                <span asp-validation-for="age" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="occupation" class="control-label"></label>
+                <input asp-for="occupation" class="form-control" />
+                <span asp-validation-for="occupation" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="sport" class="control-label"></label>
+                <input asp-for="sport" class="form-control" />
+                <span asp-validation-for="sport" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+                <a asp-controller="Friend" asp-action="index" class="btn btn-primary">Cancel</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
